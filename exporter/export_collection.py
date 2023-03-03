@@ -24,7 +24,7 @@ def get_export_filename(export_name, export_type, include_extension=True):
     """Gets a preview of the export filename based on `export_name` and `export_type`."""
     export_name = validate_export_name(export_name)
     extension = ("." + get_export_extension(export_type).lower()) if include_extension else ""
-    return f"{export_type}_{export_name}{extension}"
+    return f"{export_name}{extension}"
 
 
 def validate_export_name(export_name):
